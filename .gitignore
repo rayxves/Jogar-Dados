@@ -1,0 +1,30 @@
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]eleases/
+[Aa][Rr][Mm]/
+[Bb]uild/
+[Bb]uildLogs/
+
+# NuGet
+*.nupkg
+*.snupkg
+*.nuspec
+*.cache
+*.config
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.suo
+*.vscode/
+*.csproj.user
+*.dbmdl
+*.bak
+*.log
+*.dmg
+*.pidb
+*.svd
+*.suo
+*.csproj.user
