@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "eHDxfrBL5ptO4EtvOLvK+B03SQg2CJl1DlJQMNSnlmyDRF1ARudlq2mj91eFDzn5mCmABnVAKpsa/tP1SO+fYg==",
+  "success": true,
+  "projectFilePath": "/home/ray/Documentos/C#/JogarDados/JogarDados/JogarDados.csproj",
+  "expectedPackageFiles": [
+    "/home/ray/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.7/microsoft.aspnetcore.app.ref.8.0.7.nupkg.sha512"
+  ],
+  "logs": []
+}
