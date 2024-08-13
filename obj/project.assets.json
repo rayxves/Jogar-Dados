@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/ray/Documentos/C#/JogarDados/JogarDados/JogarDados.csproj",
+      "projectUniqueName": "/home/ray/Documentos/C#/JogarDados/JogarDados.csproj",
       "projectName": "JogarDados",
-      "projectPath": "/home/ray/Documentos/C#/JogarDados/JogarDados/JogarDados.csproj",
+      "projectPath": "/home/ray/Documentos/C#/JogarDados/JogarDados.csproj",
       "packagesPath": "/home/ray/.nuget/packages/",
-      "outputPath": "/home/ray/Documentos/C#/JogarDados/JogarDados/obj/",
+      "outputPath": "/home/ray/Documentos/C#/JogarDados/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/ray/.nuget/NuGet/NuGet.Config"

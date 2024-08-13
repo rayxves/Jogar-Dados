@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "eHDxfrBL5ptO4EtvOLvK+B03SQg2CJl1DlJQMNSnlmyDRF1ARudlq2mj91eFDzn5mCmABnVAKpsa/tP1SO+fYg==",
+  "dgSpecHash": "ytMgsmEMF4OEJ9Un9Rh72/Dx+Pb6HYm1h+acmlS3eTLFsPFGXn5FEz3TicBrBwEwW70nRdnERgK2/sSt4oOblQ==",
   "success": true,
-  "projectFilePath": "/home/ray/Documentos/C#/JogarDados/JogarDados/JogarDados.csproj",
+  "projectFilePath": "/home/ray/Documentos/C#/JogarDados/JogarDados.csproj",
   "expectedPackageFiles": [
     "/home/ray/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.7/microsoft.aspnetcore.app.ref.8.0.7.nupkg.sha512"
   ],
