@@ -9,7 +9,7 @@ O principal objetivo deste projeto é proporcionar uma oportunidade de aprendiza
 
 ## Exemplo de Uso
 - Ao iniciar o programa, será solicitado o nome dos jogadores.
-- Em seguida, será solicitado o núpomero de rodadas a serem jogadas.
+- Em seguida, será solicitado o número de rodadas a serem jogadas.
 - Para cada rodada, você deve digitar o número que acha que o dado vai mostrar.
 - O programa informará o vencedor de cada rodada e o vencedor final.
 
