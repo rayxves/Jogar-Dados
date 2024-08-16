@@ -4,28 +4,31 @@ namespace JogarDados
 {
     class Program
     {
+        public void setDecoration(){
+            Console.WriteLine("-##--##--##--##--##--##--##--##--##--##--##--##--##--##--##--##--##--##--##--");
+        }
         public void setInput(out string primeiroJogador, out string segundoJogador)
         {
-            Console.WriteLine("Informe o nome do primeiro jogador: ");
+            Console.WriteLine("\nInforme o nome do primeiro jogador: ");
             primeiroJogador = Console.ReadLine() ?? "jogador 1";
 
-            Console.WriteLine("Informe o nome do segundo jogador: ");
+            Console.WriteLine("\nInforme o nome do segundo jogador: ");
             segundoJogador = Console.ReadLine() ?? "jogador 2";
         }
 
-        public void startGame()
+        public void startGame(string primeiroJogador, string segundoJogador)
         {
-            Console.WriteLine("\n-##--##--##--##--##--##--##--##--##--##--##--##--##--##--##--##--##--##--##--");
-            Console.ForegroundColor = ConsoleColor.Magenta;
-            Console.WriteLine(" Seja bem-vindo.\n  O jogo é dividido em n rodadas.  O jogador que tirar o maior número no dado na maioria das jogadas vence a partida.\n  Em caso de empate (onde os dois tiram o mesmo número), nenhum jogador pontuará.");
+            setDecoration();
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("  Seja bem-vindo.\n  O jogo é dividido em n rodadas. O jogador que tirar o maior número no dado na maioria das jogadas vence a partida.\n  Em caso de empate (onde os dois tiram o mesmo número), nenhum jogador pontuará.");
             Console.ResetColor();
-            Console.WriteLine("-##--##--##--##--##--##--##--##--##--##--##--##--##--##--##--##--##--##--##--##--\n");
+            setDecoration();
 
             int numeroDePartidas;
             while (true)
             {
-                Console.WriteLine("Digite o número de rodadas: ");
-                string input = Console.ReadLine();
+                Console.WriteLine("\nDigite o número de rodadas: ");
+                string input = Console.ReadLine() ?? "3";
                 if (int.TryParse(input, out numeroDePartidas) && numeroDePartidas > 0)
                 {
                     break;
@@ -36,10 +39,10 @@ namespace JogarDados
                 }
             }
 
-            setGame(numeroDePartidas);
+            setGame(numeroDePartidas, primeiroJogador, segundoJogador);
         }
 
-        public void setGame(int numeroDePartidas)
+        public void setGame(int numeroDePartidas, string primeiroJogador, string segundoJogador)
         {
             int partidas = 0;
             int pontosPrimeiroJogador = 0, pontosSegundoJogador = 0;
@@ -67,12 +70,12 @@ namespace JogarDados
                 else if (primeiroNumero.Equals(numeroPrimeiroJogador))
                 {
                     pontosPrimeiroJogador++;
-                    Console.WriteLine("\nO primeiro jogador ganhou a rodada.");
+                    Console.WriteLine($"\n{primeiroJogador} ganhou a rodada.");
                 }
                 else if (segundoNumero.Equals(numeroSegundoJogador))
                 {
                     pontosSegundoJogador++;
-                    Console.WriteLine("\nO segundo jogador ganhou a rodada.");
+                    Console.WriteLine($"\n{segundoJogador} ganhou a rodada.");
                 }
                 else
                 {
@@ -83,20 +86,20 @@ namespace JogarDados
                 Console.ResetColor();
             }
 
-            setWinner(pontosPrimeiroJogador, pontosSegundoJogador);
+            setWinner(pontosPrimeiroJogador, pontosSegundoJogador, primeiroJogador, segundoJogador);
         }
 
-        public void setWinner(int pontosPrimeiroJogador, int pontosSegundoJogador)
+        public void setWinner(int pontosPrimeiroJogador, int pontosSegundoJogador, string primeiroJogador, string segundoJogador)
         {
             Console.ForegroundColor = ConsoleColor.Red;
 
             if (pontosPrimeiroJogador > pontosSegundoJogador)
             {
-                Console.WriteLine("\nO primeiro jogador é o vencedor da partida.");
+                Console.WriteLine($"\n{primeiroJogador} é o vencedor da partida.");
             }
             else if (pontosSegundoJogador > pontosPrimeiroJogador)
             {
-                Console.WriteLine("\nO segundo jogador é o vencedor da partida.");
+                Console.WriteLine($"\n{segundoJogador} é o vencedor da partida.");
             }
             else
             {
@@ -113,6 +116,7 @@ namespace JogarDados
             string primeiroJogador, segundoJogador;
             jogo.setInput(out primeiroJogador, out segundoJogador);
 
+
             while (primeiroJogador.Equals(segundoJogador))
             {
                 Console.WriteLine("Os nomes dos jogadores não podem ser iguais. Por favor, insira nomes diferentes.");
@@ -123,10 +127,10 @@ namespace JogarDados
 
             while (tentarNovamente)
             {
-                jogo.startGame();
+                jogo.startGame(primeiroJogador, segundoJogador);
                 Console.WriteLine("\nDeseja jogar novamente? (s/n)");
 
-                string resposta = Console.ReadLine()?.ToLower();
+                string resposta = Console.ReadLine()?.ToLower() ?? "n";
 
                 if (resposta == "s")
                 {
@@ -144,9 +148,10 @@ namespace JogarDados
             }
 
             Console.ForegroundColor = ConsoleColor.Magenta;
-            Console.WriteLine("\nObrigado por jogar!");
+            Console.WriteLine("\nObrigado por jogar!\n");
             Console.ResetColor();
-            Console.WriteLine("\n-##--##--##--##--##--##--##--##--##--##--##--##--##--##--##--##--##--##--##--");
+            jogo.setDecoration();
+           
         }
     }
 }
